@@ -8,17 +8,27 @@ public class App
     public static void main( String[] args )
     {       
 
+        System.out.println("Enter a number higher than 5");
         Scanner sc = new Scanner(System.in);
 
-        int input = sc.nextInt();
+        int input;
+        int result = 1;
 
-        if (input == 1 || input == 2){
-            System.out.println("Ticket price is: " + 160 * (70 / 100));
-        }else if (input == 3 || input == 4){
-            System.out.println("Ticket price is: " + 160 * (75 / 100));
-        }else{
-            System.out.println("Ticket price is: " + 160);
+        do{
+
+            input = sc.nextInt();
+            if (input < 5)
+                System.out.println("The number must be higher than 5");
+        
+        }while(input < 5);
+
+        for (int i=1;i<input;i++){
+            if(i % 5 == 0){
+                result = result * i;
+            }
         }
+
+        System.out.println(result);
 
         sc.close();
 
