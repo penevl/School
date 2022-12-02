@@ -1,7 +1,6 @@
 package org.penevl;
 
-import java.util.ArrayList;
-import java.util.List;
+
 import java.util.Scanner;
 
 public class App
@@ -11,23 +10,32 @@ public class App
     {       
 
         Scanner sc = new Scanner(System.in);
+        int m,n;
+        int count = 0;
 
-        int input = sc.nextInt();
-        List<Integer> nums = new ArrayList<Integer>();
+        do{
 
-        for (int i=1;i<=input;i++){
-            if(i % 2 == 0)
-                nums.add(i);
+            n = sc.nextInt();
+            if (n < 100 && n > 999)
+                System.out.println("You need to enter a 3 digit number");
+
+        }while(n < 100 && n > 999);
+
+
+        do{
+
+            m = sc.nextInt();
+            if (m < 100 && m > 999)
+                System.out.println("You need to enter a 3 digit number");
+
+        }while(m < 100 && m > 999);
+
+        for (int i=n;i<m;i++){
+            if (i/10%10 == 3)
+                count++;
         }
 
-        if (!(nums == null)){
-            int sum = 0;
-            for (int i : nums)
-                sum = sum + i;
-            float result = sum / nums.size();
-            System.out.println("Result: " + result);
-        }else
-            System.out.println("No whole numbers");
+        System.out.println(count);
 
     }
 }
