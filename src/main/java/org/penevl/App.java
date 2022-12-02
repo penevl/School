@@ -12,6 +12,7 @@ public class App
         Scanner sc = new Scanner(System.in);
         int m,n;
         int count = 0;
+        int sum = 0;
 
         do{
 
@@ -31,11 +32,14 @@ public class App
         }while(m < 100 && m > 999);
 
         for (int i=n;i<m;i++){
-            if (i/10%10 == 3)
+            if (i/10%10 == 3) {
                 count++;
+                sum = sum + i;
+            }
         }
 
-        System.out.println(count);
+        System.out.println("Count is: " + count);
+        System.out.println("Sum is: " + sum);
 
     }
 }
