@@ -17,3 +17,6 @@ target/
 
 # Dependency analytics
 **.apt/
+
+# IntelliJ
+.idea/
