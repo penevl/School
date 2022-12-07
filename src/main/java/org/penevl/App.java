@@ -8,31 +8,25 @@ public class App
     public static void main( String[] args )
     {       
 
-        System.out.println("Enter a number higher than 5");
+        System.out.println("Enter 2 numbers the second one higher than the first.");
         Scanner sc = new Scanner(System.in);
 
-        int input;
+        int n,m;
         int count = 0;
-        int result = 1;
+        int result = 0;
 
-        do{
+        n = sc.nextInt();
+        m = sc.nextInt();
 
-            input = sc.nextInt();
-            if (input < 5)
-                System.out.println("The number must be higher than 5");
-        
-        }while(input < 5);
-
-        for (int i=1;i<input;i++){
-            if(i % 5 == 0){
+        for (int i = n; i <= m; i++) {
+            if (i % 3 == 0 || i % 7 == 0){
+                result += i;
                 count++;
-                result = result * i;
             }
         }
 
-        System.out.println("Result is: " + result);
-        System.out.println("Number of numbers divisible by 5 is: " + count);
-        // Не е възможно да няма числа които се делят на 5 защото се проверява дали числото въведено е по-малко от 5
+        float avarage = result / count;
+        System.out.print("Avg. is: " + avarage);
 
         sc.close();
 
