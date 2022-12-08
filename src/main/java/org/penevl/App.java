@@ -27,8 +27,11 @@ public class App
         }
 
         float avarage = result / count;
-        System.out.print("Avg. is: " + avarage);
-
+        if (avarage == 0) {
+            System.out.println("No numbers matched the required conditions");
+        }else{
+            System.out.print("Avg. is: " + avarage);
+        }
         sc.close();
 
     }
