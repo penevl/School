@@ -19,7 +19,7 @@ public class App
 
         for (int i = 1; i <= n; i++) {
 
-            sum = sum + 1 + 1.0 / (i*i);
+            sum = sum + 1.0 / i;
 
         }
 
