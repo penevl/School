@@ -7,24 +7,32 @@ public class App
 {
 
     public static void main( String[] args )
-    {       
+    {
 
-        System.out.println("Enter a number");
         Scanner sc = new Scanner(System.in);
-
-        int n;
+        System.out.print("Enter the height of tree: ");
         char character = '*';
-        n = sc.nextInt();
+        int n = sc.nextInt();
 
-
-        for (int i = 0; i < 3; i++) {
-
-            for (int x = 1;x <= n;x++)
-                System.out.print(character);
-            System.out.println(" ");
+        for(int i = 1;i <= n;i++)
+        {
+            for(int j = n-i;j > 0;j--)
+            {
+                System.out.print(" ");
+            }
+            for(int k = 1;k <= i;k++)
+            {
+                System.out.print(character + " ");
+            }
+            System.out.println();
         }
 
-        sc.close();
+        for (int i=0;i<2;i++){
+            for (int x=0;x< n - 1;x++){
+                System.out.print(" ");
+            }
+            System.out.println(character);
+        }
 
     }
 }
