@@ -13,17 +13,16 @@ public class App
         Scanner sc = new Scanner(System.in);
 
         int n;
-        double sum = 0;
-
+        char character = '*';
         n = sc.nextInt();
 
-        for (int i = 1; i <= n; i++) {
 
-            sum = sum + 1.0 / i;
+        for (int i = 0; i < 3; i++) {
 
+            for (int x = 1;x <= n;x++)
+                System.out.print(character);
+            System.out.println(" ");
         }
-
-        System.out.println(sum);
 
         sc.close();
 
