@@ -12,15 +12,15 @@ public class App
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter numbers");
         int count = 0;
-        int input;
+        int input = 1;
 
-        do {
+        while (input != 0){
 
             input = sc.nextInt();
             if(input % 2 == 0 && input != 0)
                 count++;
 
-        }while(input != 0);
+        }
 
         System.out.println(count);
 
