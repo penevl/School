@@ -11,22 +11,19 @@ public class App
 
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter numbers: ");
-        int sum = 0;
-        int count = 0;
-        int input;
+        
+        int input = sc.nextInt();
+        char character = '*';
 
-        do{
+        for (int i=0;i<input;i++){
 
-            input = sc.nextInt();
-
-            if (input % 3 == 0 || input % 7 == 0){
-                sum += input;
-                count++;
+            for (int x=0; x<input;x++) {
+                System.out.print(character);
             }
 
-        }while(input != 7);
+            System.out.println(" ");
 
-        System.out.println("Avarage is: " + (sum / count));
+        }
 
         sc.close();
     }
