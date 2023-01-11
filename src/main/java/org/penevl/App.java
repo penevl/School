@@ -10,29 +10,24 @@ public class App
     {
 
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter the height of tree: ");
-        char character = '*';
-        int n = sc.nextInt();
+        System.out.print("Enter numbers: ");
+        int sum = 0;
+        int count = 0;
+        int input;
 
-        for(int i = 1;i <= n;i++)
-        {
-            for(int j = n-i;j > 0;j--)
-            {
-                System.out.print(" ");
-            }
-            for(int k = 1;k <= i;k++)
-            {
-                System.out.print(character + " ");
-            }
-            System.out.println();
-        }
+        do{
 
-        for (int i=0;i<2;i++){
-            for (int x=0;x< n - 1;x++){
-                System.out.print(" ");
-            }
-            System.out.println(character);
-        }
+            input = sc.nextInt();
 
+            if (input % 3 == 0 || input % 7 == 0){
+                sum += input;
+                count++;
+            }
+
+        }while(input != 7);
+
+        System.out.println("Avarage is: " + (sum / count));
+
+        sc.close();
     }
 }
