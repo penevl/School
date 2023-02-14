@@ -1,28 +1,30 @@
 package org.penevl;
 
-
 import java.util.Scanner;
 
 public class App
 {
 
+    private static float getLength(float radius){
+        return 2*3.14f*radius;
+    }
+    private static float getSurface(float radius){
+        return 3.14f*radius*radius;
+    }
+
     public static void main( String[] args )
     {
 
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter numbers: ");
-        
-        int input = sc.nextInt();
-        char character = '*';
+        System.out.print("Enter the radius of the circle: ");
+        int radius = sc.nextInt();
 
-        for (int i=0;i<input;i++){
+        System.out.println("Length is: " + getLength(radius));
+        System.out.println("Surface is: " + getSurface(radius));
 
-            for (int x=0; x<input;x++) {
-                System.out.print(character);
-            }
-
-            System.out.println(" ");
-
+        System.out.println("-----------Examples-----------");
+        for (float i=0.5f;i<=4;i+=0.5){
+            System.out.println("Example value is: " + i + "    Length is: " + getLength(i) + "   Surface is: " + getSurface(i));
         }
 
         sc.close();
